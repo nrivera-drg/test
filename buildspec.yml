@@ -13,6 +13,7 @@ phases:
       - git config --global user.name "nrivera-drg"
       - git config --global user.password $GITHUB_TOKEN
       - printenv
+      - ps faux
       - git clone https://github.com/dresources/drga-dev-infrastructure-modules.git
       - ls -alF drga-dev-infrastructure-modules/
 
