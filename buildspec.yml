@@ -7,7 +7,9 @@ env:
 phases:
   install:
     commands:
+      - pwd
       - echo "INSTALL" >> /tmp/artifact.txt
+      - git clone git@github.com:dresources/drga-dev-infrastructure-modules.git
 
   build:
     commands:
