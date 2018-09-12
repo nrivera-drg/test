@@ -1,0 +1,21 @@
+version: 0.2
+
+env:
+  variables:
+    TEST: "FROM_VARIABLE"
+
+phases:
+  install:
+    commands:
+      - echo "INSTALL" >> /tmp/artifact.txt
+
+  build:
+    commands:
+      - echo "BUILD $TEST" >> /tmp/artifact.txt
+
+  post_build:
+    commands:
+      - echo "POST BUILD $TEST" >> /tmp/artifact.txt
+artifacts:
+  files:
+    - /tmp/artifact.txt
