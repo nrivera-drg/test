@@ -9,9 +9,10 @@ phases:
     commands:
       - pwd
       - echo "INSTALL" >> /tmp/artifact.txt
-      - git config credential.helper 'cache --timeout=600'
-      - git config user.name "nrivera-drg"
-      - git config user.password $GITHUB_TOKEN
+      - git config --global credential.helper 'cache --timeout=600'
+      - git config --global  user.name "nrivera-drg"
+      - git config --global  user.password $GITHUB_TOKEN
+      - ls -alF /root/.git
       - git --version
       - ls -alF $HOME
       - uname -a
