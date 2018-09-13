@@ -9,6 +9,7 @@ phases:
     commands:
       - pwd
       - echo "INSTALL" >> /tmp/artifact.txt
+      - apt-get update && apt-get -y install jq ssh git
       - git config --global credential.helper 'cache --timeout=600'
       - git config --global  user.name "nrivera-drg"
       - git config --global  user.password $GITHUB_TOKEN
