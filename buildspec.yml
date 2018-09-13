@@ -12,6 +12,7 @@ phases:
       - git config --global credential.helper 'cache --timeout=600'
       - git config --global user.name "nrivera-drg"
       - git config --global user.password $GITHUB_TOKEN
+      - git --version
       - printenv
       - ps faux
       - git clone https://github.com/dresources/drga-dev-infrastructure-modules.git
